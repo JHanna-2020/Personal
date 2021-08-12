@@ -1,0 +1,65 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border:3px solid black;
+}
+th{
+    background-color:lightskyblue
+}
+tr{
+    border:1px solid black;
+}
+tr.even{
+    background-color:lightslategray
+}
+td{
+    text-align: center;
+}
+.form{
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+.inputPadding{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#week{
+    background-color: lightcoral;
+}
+button{
+    width: 500px;
+    height: 30px;
+}
+button{
+    border:0;
+    color:white;
+    background-color:green;
+    cursor:pointer;
+}
+button:hover{
+    background-color:lightgreen;
+    color:black;
+
+}
+.paragraphs{
+    display:none;
+}
+#export{
+    background:blue; 
+    color:white;
+   float: right;
+}
+#export:hover{
+    background:lightblue;
+    color:black;
+    
+}
+#assignmentName, #date{
+    width: 400px;
+    height:30px;
+    font-size:20px;
+}
+#check{
+    width:50px;
+}

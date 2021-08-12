@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>School</title>
+  </head>
+  <body>
+    <script src="export.js"></script>
+    <script src="script.js"></script>
+    <h1 class="text-center text-primary">Dashboard</h1>
+    <ul class="nav navbar-light">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" target="blank" href="notes/bio.html">Biology</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" target="blank" href="notes/chem/chem.html"
+          >Chemistry</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" target="blank" href="#">US History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" target="blank" href="booknotes/booknotes.html"
+          >Book Notes</a
+        >
+      </li>
+    </ul>
+    <br>
+   <div class="mycontainer">
+    <h2 class="m-2">Task Manager</h2>
+    <p class="m-2">ID and Completion are autofilled</p>
+    <div id="form" class="text-center form-group border border-dark m-2">
+      <form id="myForm">
+        <label for="">Date Assigned: </label>
+        <input
+          class="m-2 col-lg-3"
+          type="date"
+          name="dateAssigned"
+          id="dateInput"
+        />
+        <br />
+        <label for="">Assignment: </label>
+        <input
+          class="m-2 col-lg-3"
+          type="text"
+          name="assignment"
+          id="firstNameInput"
+        />
+        <br />
+        <label for="">Class:</label>
+        <input
+          class="m-2 col-lg-3"
+          type="text"
+          name="class"
+          id="lastNameInput"
+        />
+        <br />
+        <label for="">Grade: </label>
+        <input
+          class="m-2 col-lg-3"
+          type="text"
+          name="grade"
+          id="usernameInput"
+          required
+        />
+        <br />
+        <label for="">Date Complete: </label>
+        <input
+          class="m-2 col-lg-3"
+          type="date"
+          name="Completed"
+          id="password"
+        />
+        <br />
+        <label for="">Notes: </label>
+        <input type="text" name="Notes" id="notes" class="m-2 col-lg-3" />
+      </form>
+      <button
+        class="btn btn-success m-2 ml-8"
+        id="addAssignmentBtn"
+        onclick="formFillOut(); clearForm();"
+      >
+        Add Assignment
+      </button>
+    </div>
+    <details id="details" class="d-none">
+      <summary>Most Recent Entry</summary>
+      <p id="description">
+        write the username and password down somewhere
+        <span id="important"
+          >we will not be able to recover it if it is forgotten</span
+        >
+      </p>
+      <p id="firstName">First Name:</p>
+      <p id="lastName">Last Name:</p>
+      <p id="email">Email:</p>
+      <p id="username">Username:</p>
+      <p id="pass">Password:</p>
+      <p id="notesOutput">Notes:</p>
+    </details>
+    <table id="tblData" class="w-100">
+      <tr class="table bg bg-primary border">
+        <th id="idNum">ID</th>
+        <th>Date Assigned</th>
+        <th>Assignment</th>
+        <th>Class</th>
+        <th>Completion</th>
+        <th>Grade</th>
+        <th>Date Completed</th>
+        <th>Notes</th>
+      </tr>
+    </table>
+    <div class="text-right">
+      <button
+        id="delete"
+        class="btn btn-danger m-2"
+        onclick=" deleteLastEntry();"
+      >
+        Delete Last Entry
+      </button>
+    </div>
+    <button
+      id="export"
+      class="btn btn-primary m-2"
+      onclick="exportTableToExcel('tblData', 'Daily Tasks')"
+    >
+      Export Data
+    </button>
+  </div>
+  
+  </body>
+</html>
