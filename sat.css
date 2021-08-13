@@ -11,6 +11,9 @@ h2{
 table{
     width: 100%;
 }
+td{
+    border: 1px solid black;
+}
 table,td,th{
     border-collapse: collapse;
     border: 1px solid black;
@@ -47,4 +50,12 @@ cursor: pointer;
 }
 #addNotes{
     float:right;
+}
+#btn{
+    background-color:red;
+    color:white;
+}
+#btn:hover{
+    background-color:lightcoral;
+    color:black;
 }
