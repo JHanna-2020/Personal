@@ -4,45 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAT Manager</title>
+    <title>Book Tracker</title>
     <link rel="stylesheet" href="sat.css">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="updateTable();">
     <script src="sat.js"></script>
-    <script src="export.js"></script>
-
-   
-    <div class="form">
-    <form action="">
-        <input type="text" name="" id="assignmentName" placeholder="Assignment Name">
-        <br>
-        <br>
-        <input type="date" name="" id="date">
-        <br>
-        <br>
-       
-        <button type="button" onclick="formFillOut(); clearInputs();">Add Assignment</button>
-    </form>
-</div>
-<div class="paragraphs">
-<p id="name"></p>
-<p id="dateOutput"></p>
-<p id="completed"></p>
-</div>
-<div class="resultsTable">
-    <table id="assignments" >
-        <tr>
-            <th>Assignment Name</th>
-            <th>Date</th>
-            <th>Completion</th>
-
-        </tr>
-    </table>
-    <br> 
+   <h1>SAT Task Manager</h1> 
+   <!-- <button id="addBooks" onclick="myFunction();">Add Books</button> -->
     <br>
+    <br>
+   <div id="bookForm">
 
-    <button id="export" type="button" onclick="exportTableToExcel('assignments', Date()+ 'Assignments')">Export</button>
-</div>
+       <h2>Add Assignments</h1>
+        <form action="" id="form">
+            <label for="">Name</label>
+            <input type="text" name="" id="bookTitleInput">
+            <br>
+            <br>
+            <label>Date</label>
+            <input type="date" name="" id="authorInput">
+            <br>
+            <br>
+            
+            <br>
+            <br>
+            <button type="button" onclick="addBook(); updateTable(); clear();">Submit</button>
+            <button type="button" onclick="localStorage.clear();">Clear localStorage</button>
+        </form>
+   </div>
+   <div id="data">
+       <table id="table">
+           <tr>
+               
+               <th>Assignment</th>
+               <th>Date</th>
+               <th>Completion</th>
+            </tr>
+       </table>
+   </div>
 </body>
+
 </html>
